@@ -1,0 +1,15 @@
+.name {
+  font-size: 1.5rem;
+  font-weight: 500;
+  background: linear-gradient(120deg, var(--primary), var(--accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.name_bold {
+  font-size: 1.5rem;
+  font-weight: 600;
+  background: linear-gradient(120deg, var(--primary), var(--accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

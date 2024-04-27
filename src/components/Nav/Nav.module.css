@@ -1,0 +1,70 @@
+.nav {
+  position: sticky;
+  top: 0;
+  left: 0;
+  padding: 8;
+  height: 60px;
+  background-color: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  z-index: 1000;
+  /*box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 10px;  Add this line */
+
+  animation: enhance-header linear both;
+  animation-timeline: scroll(root);
+  animation-range: 0 100px;
+}
+
+@keyframes enhance-header {
+  to {
+    background-color: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(10px);
+  }
+}
+
+.name_container {
+  position: relative;
+  display: flex;
+  align-items: baseline;
+}
+
+.links_container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 20vw;
+  div {
+    padding: 0 0.2rem;
+    border-radius: 0.5rem;
+    transition: 0.3s ease-in-out;
+
+    z-index: 5;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  div::before {
+    content: "";
+    height: 50%;
+    width: 100%;
+    display: block;
+    z-index: -5;
+    opacity: 30%;
+    position: absolute;
+    transition: all 0.3s ease;
+    background: linear-gradient(180deg, transparent 50%, var(--accent) 50%);
+  }
+
+  div:hover::before {
+    height: 100%;
+    transition: all 0.3s ease;
+    background: linear-gradient(180deg, var(--accent) 50%, var(--accent) 50%);
+    opacity: 80%;
+  }
+}

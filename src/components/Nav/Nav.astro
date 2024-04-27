@@ -1,0 +1,19 @@
+---
+import styles from "./Nav.module.css";
+import globalStyles from "../../global.module.css";
+type Props = {};
+
+const {} = Astro.props;
+---
+
+<nav class={styles.nav}>
+  <div class={styles.name_container}>
+    <p class={globalStyles.name_bold}>Job Martinez</p>
+  </div>
+  <div class={styles.links_container}>
+    <div><a href="/">Home</a></div>
+    <div><a href="/about">Projects</a></div>
+    <div><a href="/contact">Contact</a></div>
+    <div><a href="/blog">Skills</a></div>
+  </div>
+</nav>
