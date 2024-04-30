@@ -15,12 +15,14 @@
   animation: enhance-header linear both;
   animation-timeline: scroll(root);
   animation-range: 0 100px;
+  border-radius: 0 0 10px 10px;
 }
 
 @keyframes enhance-header {
   to {
     background-color: rgba(255, 255, 255, 0.4);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(2px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
 }
 
