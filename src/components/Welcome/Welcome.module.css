@@ -1,4 +1,6 @@
 .title {
+  max-width: fit-content;
+  margin: 0 0 0 0;
   display: flex;
   flex-direction: column;
   align-items: left !important;
@@ -22,15 +24,24 @@
 }
 
 .dev_text {
-  color: var(--primary);
   font-size: 7rem;
-  background: linear-gradient(170deg, var(--accent), var(--primary));
+  background: linear-gradient(120deg, var(--primary), var(--accent));
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
   font-weight: 500;
   font-family: "Thunder", "Impact", Arial, Helvetica, sans-serif;
-  margin-top: -80px;
-  text-align: end;
-  padding-right: 15px;
+  margin: -90px 0 0 0;
+  text-align: start;
+  padding-left: 36px;
+}
+
+.title_container {
+  width: 50%;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
 }

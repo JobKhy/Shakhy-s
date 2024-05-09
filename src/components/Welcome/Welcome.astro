@@ -3,17 +3,109 @@ import globalStyles from "../../global.module.css";
 import styles from "./Welcome.module.css";
 ---
 
-<div class={globalStyles.row_container}>
-  <article>
-    <h3>Hi! 👋 My name is Job</h3>
+<div id="home" class={globalStyles.row_container}>
+  <article class={styles.title_container}>
+    <div class={styles.title}>
+      <h1 class={styles.front_text}>Hello👋</h1>
+      <h2 class={styles.dev_text}>Im Job</h2>
+    </div>
+
     <p class={(globalStyles.pretty_text, globalStyles.base_text)}>
-      Junior Front End Developer and Scrum Master who wants to improve his
+      I'm a 19-year-old Frontend Developer from México who wants to improve his
       knowledge and create pleasant and easy-to-understand compositions for
       everyone.
     </p>
+
+    <!-- <p class={(globalStyles.pretty_text, globalStyles.base_text)}>
+      Im 19 years old and I live in México. I am currently studying the
+      university. I am a Junior Front End Developer and Scrum Master who wants
+      to improve his knowledge and create pleasant and easy-to-understand
+      compositions for everyone.
+    </p>
+
+    <p class={(globalStyles.pretty_text, globalStyles.base_text)}>
+      I have been working as a Front End Developer for a half year using some
+      React libaries like Tailwind, Material-UI, and Styled Components. I am
+      also familiar with Scrum and Agile methodologies.
+    </p>
+
+    <p class={(globalStyles.pretty_text, globalStyles.base_text)}>
+      I also strive to create pleasant and easy-to-understand compositions for
+      everyone. In summary, I am a Junior Front End Developer and Scrum Master
+      who is passionate about technology and constantly seeking opportunities to
+      learn and grow professionally.
+    </p> -->
   </article>
-  <div class={styles.title}>
-    <h1 class={styles.front_text}>Frontend</h1>
-    <h2 class={styles.dev_text}>Developer</h2>
-  </div>
+  <article class={styles.title_container + " " + styles.contact}>
+    <h3>Do you have a project in mind?</h3>
+    <section class={styles.contact} style={{ gap: "1rem" }}>
+      <p style={{ fontSize: "28px" }}>Send me a message!</p>
+
+      <div class="linkStyle">
+        <a href="mailto:pina.martinez.gael.job@gmail.com">
+          pina.martinez.gael.job@gmail.com</a
+        >
+      </div>
+      <p>or by other of this apps</p>
+      <!-- 
+      {
+        contact.map((contact) => (
+          <a target="blank" href={contact.link} key={contact.name}>
+            <div className="flex flex-row gap-4 self-center items-center">
+              <img
+                src={contact.icon}
+                className="min-h-0 min-w-0 w-6 shrink-0"
+              />
+              <div className="  font-light tracking-[3.2] leading-[32px] mr-20 w-[176px] shrink-0 h-full">
+                {contact.name}
+              </div>
+            </div>
+          </a>
+        ))
+      } -->
+    </section>
+  </article>
 </div>
+
+<style>
+  #home {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    margin: -60px 0 0 0;
+  }
+
+  .linkStyle {
+    text-decoration: none;
+    padding: 0 0.2rem;
+    border-radius: 0.5rem;
+    transition: 0.3s ease-in-out;
+    z-index: 5;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .linkStyle::before {
+    content: "";
+    height: 50%;
+    width: 100%;
+    display: block;
+    z-index: -5;
+    opacity: 30%;
+    position: absolute;
+    transition: all 0.3s ease;
+    background: linear-gradient(180deg, transparent 50%, var(--accent) 50%);
+  }
+
+  .linkStyle:hover::before {
+    height: 100%;
+    transition: all 0.3s ease;
+    background: linear-gradient(180deg, var(--accent) 50%, var(--accent) 50%);
+    opacity: 80%;
+  }
+</style>

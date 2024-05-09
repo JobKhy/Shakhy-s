@@ -1,0 +1,6 @@
+.work_container {
+  position: relative;
+  max-width: 45%;
+  background-color: #fff;
+  border: 1px solid var(--primary);
+}
